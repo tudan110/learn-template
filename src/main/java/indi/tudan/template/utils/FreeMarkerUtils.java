@@ -8,7 +8,6 @@ import freemarker.template.TemplateException;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -70,5 +69,5 @@ public class FreeMarkerUtils {
         configuration.setDefaultEncoding("UTF-8");
         return configuration;
     }
-    
+
 }
