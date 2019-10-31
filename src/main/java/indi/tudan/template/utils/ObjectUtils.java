@@ -10,6 +10,12 @@ package indi.tudan.template.utils;
 public class ObjectUtils {
 
     /**
+     * Don't let anyone else instantiate this class
+     */
+    private ObjectUtils() {
+    }
+
+    /**
      * 判断对象是否为 Null
      *
      * @param obj 对象

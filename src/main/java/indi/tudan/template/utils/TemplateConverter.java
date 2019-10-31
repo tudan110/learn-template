@@ -15,11 +15,16 @@ public class TemplateConverter {
      * FreeMarker 字符串替换模板
      */
     private static final String Free_Marker_REPLACEMENT_TEMPLATE = "${$1}";
-
     /**
      * 匹配一对大括号的正则表达式
      */
     private static final String A_PAIR_OF_BRACES = "\\{([^}]*)}";
+
+    /**
+     * Don't let anyone else instantiate this class
+     */
+    private TemplateConverter() {
+    }
 
     /**
      * 单对大括号转 FreeMarker 模板

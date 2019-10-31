@@ -22,6 +22,12 @@ public class FreeMarkerUtils {
     private static final String TEMPLATE_NAME = "default-template-name";
 
     /**
+     * Don't let anyone else instantiate this class
+     */
+    private FreeMarkerUtils() {
+    }
+
+    /**
      * @param template 字符串模板
      * @param model    数据
      * @return String 解析后内容

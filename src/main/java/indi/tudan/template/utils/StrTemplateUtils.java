@@ -17,6 +17,12 @@ import java.util.Map;
 public class StrTemplateUtils {
 
     /**
+     * Don't let anyone else instantiate this class
+     */
+    private StrTemplateUtils() {
+    }
+
+    /**
      * 渲染字符串模板
      * <p>
      * 依赖 hutool，自动根据用户引入的模板引擎库的 jar 来选择使用的引擎

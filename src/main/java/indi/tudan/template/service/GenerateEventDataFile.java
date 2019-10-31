@@ -124,6 +124,30 @@ public class GenerateEventDataFile {
     }
 
     /**
+     * 是否能力中心行
+     *
+     * @param row 行数据
+     * @return boolean
+     * @date 2019-10-30 16:52:16
+     */
+    private boolean isDeptRow(List<Object> row) {
+        return StringUtils.isNotBlank(StringUtils.getStr(row.get(0)));
+    }
+
+    /**
+     * 是否信息点第一行
+     *
+     * @param row 行数据
+     * @return boolean
+     * @date 2019-10-30 16:20:29
+     */
+    private boolean isEventFirstRow(List<Object> row) {
+        return StringUtils.isNotBlank(StringUtils.getStr(row.get(1)))
+                && StringUtils.isNotBlank(StringUtils.getStr(row.get(2)))
+                && StringUtils.isNotBlank(StringUtils.getStr(row.get(3)));
+    }
+
+    /**
      * 获取文件名
      *
      * @param eventCode 信息点编码
@@ -164,17 +188,6 @@ public class GenerateEventDataFile {
     }
 
     /**
-     * 补全序列
-     *
-     * @param str 字符串
-     * @return 序列
-     * @date 2019-10-30 16:33:29
-     */
-    private String leftPad(String str) {
-        return org.apache.commons.lang3.StringUtils.leftPad(str, 4, '0');
-    }
-
-    /**
      * 获取频度编码
      *
      * @param freq 频度
@@ -204,26 +217,13 @@ public class GenerateEventDataFile {
     }
 
     /**
-     * 是否能力中心行
+     * 补全序列
      *
-     * @param row 行数据
-     * @return boolean
-     * @date 2019-10-30 16:52:16
+     * @param str 字符串
+     * @return 序列
+     * @date 2019-10-30 16:33:29
      */
-    private boolean isDeptRow(List<Object> row) {
-        return StringUtils.isNotBlank(StringUtils.getStr(row.get(0)));
-    }
-
-    /**
-     * 是否信息点第一行
-     *
-     * @param row 行数据
-     * @return boolean
-     * @date 2019-10-30 16:20:29
-     */
-    private boolean isEventFirstRow(List<Object> row) {
-        return StringUtils.isNotBlank(StringUtils.getStr(row.get(1)))
-                && StringUtils.isNotBlank(StringUtils.getStr(row.get(2)))
-                && StringUtils.isNotBlank(StringUtils.getStr(row.get(3)));
+    private String leftPad(String str) {
+        return org.apache.commons.lang3.StringUtils.leftPad(str, 4, '0');
     }
 }
