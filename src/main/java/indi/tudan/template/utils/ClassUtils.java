@@ -74,7 +74,4 @@ public class ClassUtils {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(isPresent("indi.tudan.uvnccall.utils.ClassUtils"));
-    }
 }
